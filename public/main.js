@@ -21,7 +21,7 @@ if ("serviceWorker" in navigator && "PushManager" in window) {
   console.log("Service Worker and Push are supported");
 
   navigator.serviceWorker
-    .register("/sw.js")
+    .register("./sw.js", { scope: '/' })
     .then((registration) => {
       console.log("Service worker registered:", registration);
       swRegistration = registration;
